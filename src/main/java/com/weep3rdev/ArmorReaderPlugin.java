@@ -41,7 +41,7 @@ public class ArmorReaderPlugin extends Plugin {
 
 	private ArmorSlot lastSelectedSlot = null;
 	private int lastItemId = -1;
-	private int changeCounter = 0;
+	private int changeCounter = -1;
 
 	@Override
 	protected void startUp() {
