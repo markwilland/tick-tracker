@@ -29,11 +29,11 @@ public class ArmorReaderOverlay extends Overlay
     public Dimension render(Graphics2D graphics)
     {
         String armorName = plugin.getCurrentArmor();
-        Sring slotName = plugin.getSelectedSlot().getDisplayName();
+        String slotName = plugin.getSelectedSlot().getDisplayName();
 
         graphics.setColor(Color.WHITE);
         graphics.setFont(new Font("Arial", Font.BOLD, 14));
-        graphics.drawString("Helmet: " + helmetName, 10, 20);
+        graphics.drawString(slotName + ": " + armorName, 10, 20);
 
         return null;
     }
