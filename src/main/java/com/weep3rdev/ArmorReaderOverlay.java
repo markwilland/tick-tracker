@@ -30,10 +30,13 @@ public class ArmorReaderOverlay extends Overlay
     {
         String armorName = plugin.getCurrentArmor();
         String slotName = plugin.getSelectedSlot().getDisplayName();
+        int changeCount = plugin.getChangeCounter();
 
         graphics.setColor(Color.WHITE);
         graphics.setFont(new Font("Arial", Font.BOLD, 14));
+
         graphics.drawString(slotName + ": " + armorName, 10, 20);
+        graphics.drawString("APM: " + changeCount, 10, 40);
 
         return null;
     }
