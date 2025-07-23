@@ -1,12 +1,23 @@
 package com.weep3rdev;
 
+import net.runelite.client.ui.overlay.Overlay;
+import net.runelite.client.ui.overlay.OverlayLayer;
+import net.runelite.client.ui.overlay.OverlayPosition;
+
+import javax.inject.Inject;
+import javax.inject.Singleton;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics2D;
+
 @Singleton
-public class TickTrackerOverlay extends Overlay
+public class ArmorReaderOverlay extends Overlay
 {
     private final ArmorReaderPlugin plugin;
 
     @Inject
-    private TickTrackerOverlay(ArmorReaderPlugin plugin)
+    private ArmorReaderOverlay(ArmorReaderPlugin plugin)
     {
         this.plugin = plugin;
         setPosition(OverlayPosition.TOP_LEFT);
@@ -18,11 +29,8 @@ public class TickTrackerOverlay extends Overlay
     {
         String helmetName = plugin.getCurrentHelmet();
 
-        // Set text properties
         graphics.setColor(Color.WHITE);
         graphics.setFont(new Font("Arial", Font.BOLD, 14));
-
-        // Draw the text
         graphics.drawString("Helmet: " + helmetName, 10, 20);
 
         return null;

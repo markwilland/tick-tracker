@@ -6,12 +6,19 @@ import net.runelite.api.Client;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 
+import net.runelite.api.EquipmentInventorySlot;
+import net.runelite.api.InventoryID;
+import net.runelite.api.Item;
+import net.runelite.api.ItemContainer;
+import net.runelite.client.ui.overlay.OverlayManager;
+
+
 @Slf4j
 @PluginDescriptor(
 	name = "Helmet Reader",
 	description = "Shows equipped helmet in an overlay"
 )
-public class TickTracker extends Plugin
+public class ArmorReaderPlugin extends Plugin
 {
 	@Inject
 	private Client client;
@@ -20,7 +27,7 @@ public class TickTracker extends Plugin
 	private OverlayManager overlayManager;
 
 	@Inject
-	private TickTrackerOverlay overlay;
+	private ArmorReaderOverlay overlay;
 
 	@Inject
 	private ExampleConfig config;

@@ -1,14 +1,14 @@
-package com.example;
+package com.weep3rdev;
 
-import com.weep3rdev.ExamplePlugin;
+
 import net.runelite.client.RuneLite;
 import net.runelite.client.externalplugins.ExternalPluginManager;
 
-public class TickTrackerTest
+public class ArmorReaderTest
 {
 	public static void main(String[] args) throws Exception
 	{
-		ExternalPluginManager.loadBuiltin(ExamplePlugin.class);
+		ExternalPluginManager.loadBuiltin(ArmorReaderPlugin.class);
 		RuneLite.main(args);
 	}
 }
