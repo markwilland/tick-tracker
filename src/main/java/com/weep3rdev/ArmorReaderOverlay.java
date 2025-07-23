@@ -16,6 +16,7 @@ public class ArmorReaderOverlay extends Overlay
 {
     private final ArmorReaderPlugin plugin;
 
+
     @Inject
     private ArmorReaderOverlay(ArmorReaderPlugin plugin)
     {
