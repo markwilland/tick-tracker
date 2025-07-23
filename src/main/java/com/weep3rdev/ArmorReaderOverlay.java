@@ -28,7 +28,8 @@ public class ArmorReaderOverlay extends Overlay
     @Override
     public Dimension render(Graphics2D graphics)
     {
-        String helmetName = plugin.getCurrentHelmet();
+        String armorName = plugin.getCurrentArmor();
+        Sring slotName = plugin.getSelectedSlot().getDisplayName();
 
         graphics.setColor(Color.WHITE);
         graphics.setFont(new Font("Arial", Font.BOLD, 14));
